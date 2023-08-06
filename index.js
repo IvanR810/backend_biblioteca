@@ -13,7 +13,9 @@ app.use("/api/estudiante", estudiante);
 app.use("/api/libro", libro);
 app.use("/api/progreso", progreso);
 
-app.listen(3000, ()=>{
+let puerto = process.env.PORT || 3000;
+
+app.listen(puerto, ()=>{
     console.log("LISTADO DE RUTAS");
     console.log("ESTUDIANTE: http://localhost:3000/api/estudiante");
     console.log("ESTUDIANTE: http://localhost:3000/api/libro");
